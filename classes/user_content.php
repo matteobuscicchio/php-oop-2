@@ -7,8 +7,8 @@ include_once __DIR__ . '/users.php';
 class UsersPosts extends Users{
     public $post;
 
-    public function __construct(string $name, string $surname, string $email, string $password, string $post){
-        parent::__construct($name, $surname, $email, $password);
+    public function __construct(string $name, string $surname, string $post){
+        parent::__construct($name, $surname);
         $this->post = $post;
     }
 }

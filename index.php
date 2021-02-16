@@ -19,11 +19,11 @@ include __DIR__ . '/classes/users.php';
 include __DIR__ . '/classes/user_content.php';
 
 $userList = [
-    new UsersPosts('Marco', 'Montemagno', 'mrc@boolean.com', 'password', 'Post di Marco, lorem ipsum dolor sit amet'),
-    new UsersPosts('Riccardo', 'Palombo', 'ric@boolean.com', 'password', 'Post di Riccardo, lorem ipsum dolor sit amet'),
-    new UsersPosts('Matteo', 'Buscicchio', 'mtt@boolean.com', 'password', 'Post di Matteo, lorem ipsum dolor sit amet'),
-    new UsersPosts('Adriano', 'Santucci', 'adr@boolean.com', 'password', 'Post di Adriano, lorem ipsum dolor sit amet'),
-    new UsersPosts('Loredana', 'Bianchi', 'lrd@boolean.com', 'password', 'Post di Loredana, lorem ipsum dolor sit amet'),
+    new UsersPosts('Marco', 'Montemagno', 'Post di Marco, lorem ipsum dolor sit amet'),
+    new UsersPosts('Riccardo', 'Palombo', 'Post di Riccardo, lorem ipsum dolor sit amet'),
+    new UsersPosts('Matteo', 'Buscicchio', 'Post di Matteo, lorem ipsum dolor sit amet'),
+    new UsersPosts('Adriano', 'Santucci', 'Post di Adriano, lorem ipsum dolor sit amet'),
+    new UsersPosts('Loredana', 'Bianchi', 'Post di Loredana, lorem ipsum dolor sit amet'),
 ];
 // var_dump($userList);
 ?>
@@ -97,7 +97,8 @@ $userList = [
                 <?php foreach ($userList as $usr) { ?>
                     <div class="usr">
                         <h3><?= $usr->name, ' ', $usr->surname?></h3>
-                        <span><?= $usr->post?></span>
+                        <span>Contenuto</span>
+                        <p><?= $usr->post?></p>
                     </div>
                 <?php };?>
 
