@@ -7,8 +7,8 @@ class Users {
     private $userID;
     public $name;
     public $surname;
-    public $email;
-    public $password;
+    private $email;
+    private $password;
 
     public function __construct(string $name, string $surname){
         $this->name = $name;
