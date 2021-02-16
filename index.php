@@ -16,13 +16,94 @@
 // possa avere una sub-class e fate pratica con l'extends.
 
 include __DIR__ . '/classes/users.php';
+include __DIR__ . '/classes/user_content.php';
 
 $userList = [
-    new Users('Marco', 'Montemagno', 'mrc@boolean.com', 'password'),
-    new Users('Riccardo', 'Palombo', 'ric@boolean.com', 'password'),
-    new Users('Matteo', 'Buscicchio', 'mtt@boolean.com', 'password'),
-    new Users('Adriano', 'Santucci', 'adr@boolean.com', 'password'),
-    new Users('Loredana', 'Bianchi', 'lrd@boolean.com', 'password'),
+    new UsersPosts('Marco', 'Montemagno', 'mrc@boolean.com', 'password', 'Post di Marco, lorem ipsum dolor sit amet'),
+    new UsersPosts('Riccardo', 'Palombo', 'ric@boolean.com', 'password', 'Post di Riccardo, lorem ipsum dolor sit amet'),
+    new UsersPosts('Matteo', 'Buscicchio', 'mtt@boolean.com', 'password', 'Post di Matteo, lorem ipsum dolor sit amet'),
+    new UsersPosts('Adriano', 'Santucci', 'adr@boolean.com', 'password', 'Post di Adriano, lorem ipsum dolor sit amet'),
+    new UsersPosts('Loredana', 'Bianchi', 'lrd@boolean.com', 'password', 'Post di Loredana, lorem ipsum dolor sit amet'),
 ];
-var_dump($userList);
+// var_dump($userList);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>php-oop-2</title>
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: #1E2D3B;
+                min-height: 100vh;
+            }
+
+            .container {
+                width: 1070px;
+                height: 100%;
+                margin: 0 auto;
+            }
+
+            .usr_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 100px 0;
+            }
+
+            .usr {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                flex-basis: 200px;
+                padding: 20px;
+                margin: 10px 20px;
+                height: 360px;
+                background: rgb(46, 58, 70);
+                text-align: center;
+            }
+
+            .usr h3 {
+                margin: 20px 0;
+                color: white;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            .usr span {
+                color: grey;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="usr_container container ">
+                
+                <?php foreach ($userList as $usr) { ?>
+                    <div class="usr">
+                        <h3><?= $usr->name, ' ', $usr->surname?></h3>
+                        <span><?= $usr->post?></span>
+                    </div>
+                <?php };?>
+
+            </div>
+        
+        </div>
+
+    </body>
+</html>

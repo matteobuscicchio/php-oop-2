@@ -15,19 +15,6 @@ class Users {
         $this->email = $email;
         $this->password = $password;
     }
-
-    public function getName(){
-        return $this->name;
-    }
-    public function getsurname(){
-        return $this->surname;
-    }
-    public function getEmail(){
-        return $this->email;
-    }
-    public function getPassword(){
-        return $this->password;
-    }
 }
 
 
