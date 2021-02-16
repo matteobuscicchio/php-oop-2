@@ -15,8 +15,7 @@
 // @qui cercate di pensare anche ad una classe che 
 // possa avere una sub-class e fate pratica con l'extends.
 
-include __DIR__ . '/classes/users.php';
-include __DIR__ . '/classes/user_content.php';
+include __DIR__ . './classes/switch.php';
 
 $userList = [
     new UsersPosts('Marco', 'Montemagno', 'Post di Marco, lorem ipsum dolor sit amet'),
@@ -97,14 +96,11 @@ $userList = [
                 <?php foreach ($userList as $usr) { ?>
                     <div class="usr">
                         <h3><?= $usr->name, ' ', $usr->surname?></h3>
-                        <span>Contenuto</span>
+                        <span>Titolo</span>
                         <p><?= $usr->post?></p>
                     </div>
                 <?php };?>
-
             </div>
-        
         </div>
-
     </body>
 </html>
