@@ -1,5 +1,4 @@
 <?php
-include_once __DIR__ . '/users.php';
 /**
  * @author Matteo
  * @copyright boolean Ltd
